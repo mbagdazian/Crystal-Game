@@ -29,7 +29,7 @@
 			<div id=row2>
 				<div class="col-lg-4" id="instructions">
 						<div class="panel panel-default">
-  							<div class="panel-body">You don't belong here! Well, no matter. Here the challenge awaits ever the most weary of travelers. The glorious mine has powerful crystals. Click on each to change your points value. Each crystal emenates a unique energy. You must reach a frequency of 150Mhz, to bring harmony to the mine. Beware! too much energy, and you lose the challenge.</div>
+  							<div class="panel-body">You don't belong here! Well, no matter. Here the challenge awaits ever the most weary of travelers. The glorious mine has powerful crystals. Click on each to change your points value. Each crystal emenates a unique energy. You must match their collevctive frequency to bring harmony to the mine. Beware! too much energy, and you lose the challenge.</div>
 						</div>
 				</div>
 				<div class="col-lg-8" id="THECrystals">
@@ -51,8 +51,9 @@
 			<div id=row2>
 				<div class="col-lg-8" id="instructions">
 						<div class="panel panel-default">
-  							<div class="panel-body">Points:<span id="numPoints"></span></div>
-
+  							<div class="panel-body"></div>
+  									<div id="userPoints">User Frequency:<span id="numUserPoints"></span></div>
+  									<div id="targetPoints">TargetFrequency:<span id="numTargetPoints"></span></div>
 						</div>
 				</div>
 				<div class="col-lg-4" id="Scores">
@@ -80,30 +81,66 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
 
-var targetNumber = 150;
+var targetPoints = Math.floor(Math.random()* 50);
 //values
-var valCrystalOne = 25;
-var valCrystalTwo = 45;
-var valCrystalThree = 65;
-var valCrystalFour = 15;
+var valCrystalOne =15;
+var valCrystalTwo =20;
+var valCrystalThree =3;
+var valCrystalFour =7;
+var counter =0;
+var userPoints =0;
+
+
+
 
 	//crystal buttons
-	$("#crys1").on('click', function(){console.log(valCrystalOne)});
+	$("#crys1").on('click', function(setValue){console.log(valCrystalOne);
+    ($(this).attr("data-crystalvalue",valCrystalOne));
+    valCrystalOne = parseInt(valCrystalOne);
+    counter += valCrystalOne;
+    console.log(counter);
+	});
 	
-	$("#crys2").on('click', function(){console.log(valCrystalTwo)});
+	$("#crys2").on('click', function(setValue){console.log(valCrystalTwo);
+    counter += valCrystalOne;
+    console.log(counter);
+	});
 	
-	$("#crys3").on('click', function(){console.log(valCrystalThree)});
+	$("#crys3").on('click', function(setValue){console.log(valCrystalThree);
+    counter += valCrystalOne;
+    console.log(counter);
+	});
 
-	$("#crys4").on('click', function(){console.log(valCrystalFour)});
+	$("#crys4").on('click', function(setValue){console.log(valCrystalFour);
+    counter += valCrystalOne;
+    console.log(counter);
+	});
+
+
+	//at this point I can console log the value of each crystal and the counter as it increases with each click. 
+
+	//I need to set the win/loose logic so that a value counter = targetPoints becomes a win+1 and a value counter>=targetPoints becomes a loss+1
+
+	//then I need to make the values print to the html so the user can see them. 
+
+	//then I need to ensure that each win/loss resets the game page without refreshing. 
+	
 
 	//counters
 		//score
+
+
 	
 		//wins
 
+
 		//losses
 
-		//win logic
+		//
+//$('document').ready(function(){
+	//$('numTargetPoints').text(targetPoints);
+	//$('numUserPoints').text(counter);
+//});
 
 
   </script>
