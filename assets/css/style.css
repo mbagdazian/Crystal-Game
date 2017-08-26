@@ -1,0 +1,36 @@
+.body{
+	background: url("../images/Slate.jpg");
+	opacity: 0.95;
+
+}
+
+.jumbotron{
+	width: 90%;
+    background: #000 url("../images/Earth.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+
+}
+
+.auth-image{
+	width: 100px;
+	height: 125px;
+	display: inline-block;
+}
+.container {
+	display: block;
+	position: center;
+	max-width: 90%;
+}
+
+.warning{
+
+}
+
+
+.footer{
+text-align: center;
+}

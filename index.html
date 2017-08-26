@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crystal Game</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  		<link rel="logic" type="javascript" href="assets/javascript/game.css">
+
+		<meta name="viewport" content="width=device-width" maxwidth ="100%">
+</head>
+
+
+<body class="body">
+<!-- JumboTron-->
+		<div class="container" id='Jumbo'>
+			<div id='row1'>
+				 <div class = "jumbotron">
+				 	<h1 class= 'welcome'>Welcome to the Crystal Match! </h1>
+				 	<br>
+				 	<h2 class= 'warning'>Warning! Game Not suitable for humans.<h2>
+			</div>
+			
+		</div>
+<!-- Crystal Field -->
+
+		<div class="containter" id="crystalField">
+			<div id=row2>
+				<div class="col-lg-4" id="instructions">
+						<div class="panel panel-default">
+  							<div class="panel-body">You don't belong here! Well, no matter. Here the challenge awaits ever the most weary of travelers. The glorious mine has powerful crystals. Click on each to change your points value. Each crystal emenates a unique energy. You must reach a frequency of 150Mhz, to bring harmony to the mine. Beware! too much energy, and you lose the challenge.</div>
+						</div>
+				</div>
+				<div class="col-lg-8" id="THECrystals">
+					<div class="panel panel-default">
+  						<div class="panel-body">Here, the Crystals Await!</div>
+  					<img src="assets/images/CrystalOne.jpg" class="auth-image" id="crys1" alt="1">
+  					<img src="assets/images/CrystalTwo.jpg" class="auth-image" id="crys2" alt="2">
+  					<img src="assets/images/CrystalThree.jpg" class="auth-image" id="crys3" alt="3">
+  					<img src="assets/images/CrystalFour.jpg" class="auth-image" id="crys4" alt="4">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<!--Points & Scores -->
+
+		<div class="containter" id="Points">
+			<div id=row2>
+				<div class="col-lg-8" id="instructions">
+						<div class="panel panel-default">
+  							<div class="panel-body">Points:<span id="numPoints"></span></div>
+
+						</div>
+				</div>
+				<div class="col-lg-4" id="Scores">
+					<div class="panel panel-default">
+  							<div class="panel-body">
+  									<div id="winCount">User Wins:<span id="numWins"></span></div>
+  									<div id="losses">Crystal Wins:<span id="numLosses"></span></div>
+  							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- footer -->
+  <footer>
+    <div class="footer">
+          <div id="row3">
+        <div class="col-lg-12">
+      Copyright &copy; 2017 Michael Bagdazian
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+var targetNumber = 150;
+//values
+var valCrystalOne = 25;
+var valCrystalTwo = 45;
+var valCrystalThree = 65;
+var valCrystalFour = 15;
+
+	//crystal buttons
+	$("#crys1").on('click', function(){console.log(valCrystalOne)});
+	
+	$("#crys2").on('click', function(){console.log(valCrystalTwo)});
+	
+	$("#crys3").on('click', function(){console.log(valCrystalThree)});
+
+	$("#crys4").on('click', function(){console.log(valCrystalFour)});
+
+	//counters
+		//score
+	
+		//wins
+
+		//losses
+
+		//win logic
+
+
+  </script>
+
+
+</body>
+</html>
